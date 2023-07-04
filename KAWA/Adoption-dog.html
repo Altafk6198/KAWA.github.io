@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawa Adoption</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        #Adoption {
+            padding-top: 10vh;
+        }
+
+        :root {
+            --surface-color: #fff;
+            --curve: 40;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* outline: 1px solid red; */
+        }
+
+        body {
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fef8f8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 4rem 5vw;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .card {
+            position: relative;
+            display: block;
+            height: 100%;
+            border-radius: calc(var(--curve) * 1px);
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .card__image {
+            width: 100%;
+            height: 20em;
+        }
+
+        .card__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: calc(var(--curve) * 1px);
+            background-color: var(--surface-color);
+            transform: translateY(100%);
+            transition: .2s ease-in-out;
+        }
+
+        .card:hover .card__overlay {
+            transform: translateY(0);
+        }
+
+        .card__header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            padding: 1em;
+            border-radius: calc(var(--curve) * 1px) 0 0 0;
+            background-color: var(--surface-color);
+            transform: translateY(-100%);
+            transition: .2s ease-in-out;
+        }
+
+        .card__arc {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            z-index: 1;
+        }
+
+        .card__arc path {
+            fill: var(--surface-color);
+            /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
+        }
+
+        .card:hover .card__header {
+            transform: translateY(0);
+        }
+
+        .card__thumb {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .card__title {
+            font-size: 1em;
+            margin: 0 0 .3em;
+            color: #6A515E;
+        }
+
+        .card__tagline {
+            display: block;
+            margin: 1em 0;
+            font-family: "MockFlowFont";
+            font-size: .8em;
+            color: #D7BDCA;
+        }
+
+        .card__status {
+            font-size: .8em;
+            color: #D7BDCA;
+        }
+
+        .card__description {
+            padding: 0 2em 2em;
+            margin: 0;
+            color: #D7BDCA;
+            font-family: "MockFlowFont";
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+
+
+      
+
+        .f_questions {
+            width: 82vw;
+            margin-left: 8vw;
+        }
+
+        .f_questions p {
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        .footer_img {
+            height: 34vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body>footer.bg-dark.text-white.justify-content-between>section>div>a {
+            z-index: 3;
+
+        }
+    </style>
+
+
+</head>
+
+
+<body style="color: white; background-color: black;">
+
+    <!-- NAV BAR SURU -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+        <div class="container-fluid">
+            <img src="assests/LOGO NO BG WHITE (1).png" alt="" width="60" height="60"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="Index.html">K.A.W.A.</a>
+
+            <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation" input type="button" onclick="play()"><audio id="audio"
+                    src="oggwoof.ogg"></audio>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Sterlization.html">Sterilization</a>
+                    </li>
+
+                    <!-- ADOPTION WALA SURU -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="Adoption-dog.html">Adoption</a>
+
+                            <!-- <div class="dropdown-content">
+                            <br><a href="#">Adopt a Dog/Cat
+                                <i class="fa-sharp fa-solid fa-dog"></i>
+                            </a> <br>
+                            <a href="#">Adopt a 
+                                <i class="fa-sharp fa-solid fa-cat">
+
+                                </i>
+                            </a>
+                        </div> -->
+                        </div>
+                    </li>
+
+                    <!-- ADOPTION WALA SAMPLA -->
+
+
+                    <!-- GET INVOLVED WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="#">Get Involved</a>
+
+                            <div class="dropdown-content">
+                                <a href="Involve.html">Sponsor an Animal
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                </a><br>
+                                <a href="Involve.html">Foster Puppy or Kitten
+                                    <i class="fa-solid fa-house-medical"></i>
+                                </a><br>
+                                <a href="Involve.html">Become Volunteer
+                                    <i class="fa-solid fa-hand-holding-hand"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!-- GET INVOLVED WALA -->
+
+                    <!-- ANIMAL RESUCE WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="#">Animal Rescue</a>
+
+                            <div class="dropdown-content">
+                                <a href="rescue.html" class="dark">Animal Lost or Found <i
+                                        class="fa-solid fa-exclamation"></i></a><br>
+                                <a href="rescue.html">Report Animal Cruelty <i class="fa-solid fa-hands-bound"></i></a><br>
+                                <a href="rescue.html">Surrender Animal <i class="fa-sharp fa-solid fa-hands-holding-child"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ANIMAL RESUCE WALA -->
+
+                    <!-- DONATION WALA SURU -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Donation.html">Donate
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </a>
+                    </li>
+
+                    <!-- DONATION WALA SAMPLA -->
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="#">Contact Us <i
+                                class="fa-solid fa-map-location-dot"></i></a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV BAR SAMPLA -->
+
+    <div id="Adoption" class=" offset mt-3 justify-content-center">
+        <div class="post heading text-center">
+            <h3 class="display-4 fw-bold">Adoption</h3>
+            <hr class="w-50 mx-auto">
+            <!-- <h1 style="padding: 1rem;">Don’t shop, Adopt !</h1> -->
+
+        </div>
+    </div>
+
+    <!--------- FAQs Section start  ------>
+
+    <!-- <div class="f_main"> -->
+
+
+    <h1 class="text-center" style="padding: 1rem;">Adopt ! Don’t shop </h1>
+    <!-- <div class="col-6 mx-5" style="margin-top: 10%; "> -->
+
+    <!-- </div> -->
+
+    <div class="container-fluid" class="f_main">
+        <div class="row mx-auto">
+        <div class="col-lg-3 mx-auto">
+            <img src="assests/dog_adopt.png" class="img-fluid">
+        </div>
+
+        <div class="col col-lg-5 p-5 mx-auto f_section">
+
+            <h3>At KAWA, we all believe in Adopt. Don’t Shop. One of our key areas of work is to find loving homes
+                    for
+                    homeless animals.Following FAQs will help you understand more... </h3>
+        </div>
+
+        <div class="col-lg-3 mx-auto">
+            <img src="assests/cat_adopt.png" class="img-fluid">
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div class="f_questions">
+        <hr>
+        <h3><img src="assests/white paw fliped.png" alt="" width="30" height="30"> What animals are up for adoption?
+        </h3><br>
+        <p><b>- Motherless puppies and kittens</b></p>
+        <p>We get several calls of puppies and kittens who have lost their mother due to illness, accidents and
+            cruelty.
+            In such situations, it is almost impossible for the young ones to survive. This is where we step in to
+            try
+            and give them the best chance at a healthy and long life. Motherless pups and kittens are shifted to a
+            foster home where they are nurtured before being put up for adoption.</p>
+
+        <p><b>- Relocated animals</b></p>
+        <p>One of the realities we work with is the tendency of people to pick up animals and drop them off at a
+            random
+            location. We hope improved animal laws will bring an end to such actions but we cannot wait until that
+            day.
+            In such cases, we secure the animal and look for a home, a better home than he had before. In certain
+            cases,
+            adoption chances are less. For such animals, we try to settle them where they were dropped by getting
+            them
+            vaccinated, sterilised and appointing a daily feeder to provide them with nutritious meals.</p>
+
+        <p><b>- Surrendered animals</b></p>
+        <p>“If you don’t take our dog, we will drop him off on the outskirts.”<br><br>This is just one example of
+            threats we receive on a daily basis. It becomes so easy to blame and shout at the caller, but we try and
+            think of things from the animal’s perspective. The dog has done no wrong and deserves better. We assist
+            in
+            adoptions for such animals, although we need a lot of help from the families.
+        </p>
+        <hr>
+        <h3><img src="assests/white paw fliped.png" alt="" width="30" height="30"> What animals should not be up for
+            adoption?</h3><br>
+        <p><b>- Street animals who have been well settled</b> </p>
+        <p>These dogs and cats are happy with their existence and would not do well in the confines of a home. As
+            long
+            as they get food, shelter and medication when needed, street animals are quite happy on the street. </p>
+
+        <p><b>- Young ones with their mother</b></p>
+        <p>The best caregiver for any young pup or kitten is their mother! We don’t intend to replace the mother if
+            she
+            is around. We ensure we sterilise the mother later on but these babies stay with her unless:<br>
+            a) The area has no feeder<br>
+            b) There is heavy traffic <br>
+            c) The area is notorious for cruelty<br>
+        </p>
+
+        <hr>
+        <h3><img src="assests/white paw fliped.png" alt="" width="30" height="30"> How does the adoption process
+            work?
+        </h3><br>
+        <p>When a family is interested in adopting a pet, we follow a strict protocol to guide the family and ensure
+            that they are fit to keep a pet. It is also important to find the right pet and educate families on what
+            is
+            required in raising a pet at home.</p>
+        <p>We encourage people who have never had pets to sign up to become fosters. By fostering, families can gain
+            experience and make an informed decision on adoption. </p>
+
+        <hr>
+        <h3><img src="assests/white paw fliped.png" alt="" width="30" height="30"> Other things to consider?
+        </h3><br>
+        <p>Finances also play an important part in adoption. Keeping a pet at home comes with a cost - food, medical
+            aid, vaccinations, toys, etc. Sometimes, an adopter would need to hire a dog walker, trainer or leave
+            their
+            pet with a hostel when travelling. All of these are expenses which a family should be aware of BEFORE
+            they
+            decide to adopt.</p>
+        <p>At KAWA we guide the family with everything they need to do to welcome a pet home. From puppy proofing to
+            diet, our volunteers are there for the new families. </p>
+
+    </div><br>
+    <hr>
+
+    <!--------- FAQ Section end  ------>
+
+    <h3 style="margin-left: 6vw;"> <img src="assests/white paw fliped.png" alt="" width="30" height="30"> Animals
+        available for Adoption now </h3>
+
+    <cards>
+        <ul class="cards">
+            <li>
+                <a class="card">
+                    <img src="assests/images.jpeg" class="card__image" class="img-fluid" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="assests/ginger2.png" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">Ginger</h3>
+
+                            </div>
+                        </div>
+                        <p class="card__description">Age : 40 days<br>
+                            Breed : Indie ,
+                            Gender : Female</p>
+                        <button class="card__button">Close</button>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="card">
+                    <img src="assests/adopt-brown1.jpeg" class="card__image embed-responsive" alt="#" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="assests/adopt-brown-2.jpeg" alt="#" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">Bella</h3>
+
+                            </div>
+                        </div>
+                        <p class="card__description">Age : 45 days<br>
+                            Breed : Indie ,
+                            Gender : Female</p>
+                        <button class="card__button">Close</button>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="card">
+                    <img src="assests/Adopt-bw-2.jpeg" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="assests/Adopt-bw1.jpeg" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">Panda</h3>
+
+                            </div>
+                        </div>
+                        <p class="card__description">
+                        <p class="card__description">Age : 1 Month<br>
+                            Breed : Indie ,
+                            Gender : Male
+                        </p>
+                        <button class="card__button">Close</button>
+                    </div>
+                </a>
+            </li>
+            <a class="card">
+                <img src="assests/adopt-rocky-2.jpeg" class="card__image" alt="" />
+                <div class="card__overlay">
+                    <div class="card__header">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                            <path />
+                        </svg>
+                        <img class="card__thumb" src="assests/adopt-rocky-1.jpeg" alt="" />
+                        <div class="card__header-text">
+                            <h3 class="card__title">Rocky</h3>
+
+                        </div>
+                    </div>
+                    <p class="card__description">Age : 2 Months<br>
+                        Breed : Lab-Indie
+                        Gender : Male<br>
+                    </p>
+                    <button class="card__button">Close</button>
+                </div>
+            </a>
+            </li>
+        </ul>
+    </cards>
+    </div>
+    </div>
+
+    <!-- contact form for adoption start  -->
+
+    <div class="contact_adoption">
+
+        <h2 class="text-center">Register for Adoption/Enquiry</h2>
+        <hr class="w-50 mx-auto">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form method="POST" name="People Contacted" id="People-Contacted"
+                        action="https://script.google.com/macros/s/AKfycby2hGGxYN9WDUXpsa8aKiL49JrjY9zLEZgETNHIebSH5LUvtkGKrJiyHwt1KSY-o1U1/exec"
+                        onsubmit="return validateForm()" method="POST" form action="/action_page.php" class="was-validated">
+
+                        <div class="form-group col-10 row pb-3 mx-auto m-5">
+                            <div class="col-sm-6 p-2">
+                                <label for="Name" class="form-label fw-bold">Name</label>
+                                <input type="text" id="Name" name="Name" class="form-control"
+                                    placeholder="Full Name" required>
+                            </div>
+
+                          
+                            <div class="col-sm-6 p-2">
+                                <label for="Email" class="form-label fw-bold">Email</label>
+                                <input type="email" id="Email" name="Email" class="form-control" placeholder="Email" 
+                                    required >
+                            </div>
+
+                            <div class="col-sm-6 p-2">
+                                <label for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                                <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control"
+                                    maxlength="10" minlength="10" placeholder="Your Contact Number" required>
+                            </div>
+
+                            <div class="col-sm-6 p-2">
+                                <label for="Reason" class="form-label fw-bold">Reason</label>
+                                <input type="text" id="Reason" name="Reason" class="form-control"
+                                    placeholder="Reason for Adoption" required>
+                            </div>
+
+                            <div class="col-sm-12 justify-content-center p-2">
+                                <label for="Message" class="form-label fw-bold">Message</label>
+                                <textarea id="Message" name="Message" class="form-control"
+                                    placeholder="Your Message" rows="3" required></textarea>
+                            </div>
+                        
+
+
+                            <div class="col-sm-12 p-2 ">
+                                <button type="submit" button type="button" class="btn btn-primary me-2 "
+                                  onclick="myFunction()">Submit</button>
+
+                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                        aria-atomic="true">
+                                        <div class="toast-header">
+
+                                            <img src="https://i.pinimg.com/originals/c5/6c/4c/c56c4c47aa3f89c78d642c253d912d11.png"
+                                                Styleclass="rounded me-2" style="height:60px;" alt="#">
+                                            <strong class="me-auto" style="color: black;">Thank You! We will be in touch shortly.</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body" style="color: black;">
+                                            From-K.A.W.A
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <button class="btn btn-danger ms-2" type="reset">Reset the form!</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- contact form for adoption end  -->
+
+    <!-- FOOTER SURU -->
+    <div class="footer_img"
+        style="display: flex; justify-content: center; height: 50%; z-index: 2; width:fit-content ;">
+        <img src="./assests/footer bar.png" class="img-fluid"
+            style="margin-bottom:-11%; background-color: transparent;">
+    </div>
+
+    <footer class="bg-dark text-white justify-content-between" style="z-index: 1;">
+
+        <section class="mx-auto pt-3">
+            <div class="container pb-0 d-flex justify-content">
+
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Adoption-dog.html" role="button">
+                    <img src="assests/white paw fliped.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-start align-text-top mx-auto">
+                    Adopt Animal</a>
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Donation.html" role="button">
+                    <img src="assests/WhitePaw-for Walking.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-end align-text-top mx-auto">
+                    Donate</a>
+
+
+            </div>
+        </section>
+    </footer>
+    <footer class="bg-dark text-center text-white">
+
+        <section class="mb-4 mx-auto">
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" role="button"><i
+                    class="fab fa-google"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="Contacts.html" role="button"><i
+                    class="fa-solid fa-map-location-dot"></i></a>
+
+        </section>
+
+        <!-- </footer> -->
+
+
+
+
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">Kothrud Animal Welfare Association, Pune</a>
+            <a>| All Rights Reserved |</a>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: rgba(10, 184, 227, 0.641);">
+            <a>Developed and Managed by Tejal Shigwan
+                & Others</a>
+        </div>
+
+    </footer>
+
+    <!-- Footer SAMPLA -->
+
+
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+    <script>
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+        });
+    </script>
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+
+
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+    <!-- RATRI 12 TE 4.30 PARIYNTA KELA AHE PLEASE APPRECIATE -->
+    <script>
+        var btn = document.getElementById("button");
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+
+    <!-- JAVA SCRIPT FOR ADOPTION FORM  -->
+    <script>
+
+        var mytoast = document.getElementById("liveToast");
+        var myForm = document.getElementById("adoption_form");
+        myForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            var toast = new bootstrap.Toast(mytoast)
+            toast.show();
+        })
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

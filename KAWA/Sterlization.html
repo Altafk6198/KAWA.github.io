@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawa Protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            background: #000000;
+            background: -webkit-linear-gradient(to bottom, #0a0a0a, #000000);
+            background: linear-gradient(to bottom, #0c0c0c, #000000);
+
+        }
+        a { color: inherit;
+         } 
+
+        #button01 {
+            color: transparent;
+            border-radius: 10px;
+        }
+
+        .carousel-inner img {
+            height: 30vh;
+            width: 60%;
+        }
+
+        .carousel-indicators{
+            opacity: 0.3;
+        }
+        h3 {
+            text-shadow: 1px 1px 1px white;
+        }
+
+        p{
+            font-weight:bolder;
+            text-align: start;
+        }
+
+        @media only screen and (min-width: 750px) {
+            .carousel-inner img {
+                height: 50vh;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="color: white; background-color: black;">
+
+    
+<!-- NAV BAR SURU -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+    <div class="container-fluid">
+        <img src="assests/LOGO NO BG WHITE (1).png" alt="" width="60" height="60"
+            class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="Index.html">K.A.W.A.</a>
+
+        <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation" input type="button" onclick="play()"><audio id="audio"
+                src="assests/woof.mp3"></audio>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="dropbtn" href="About_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dropbtn" href="Sterlization.html">Sterilization</a>
+                </li>
+
+                <!-- ADOPTION WALA SURU -->
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link" id="dropbtn" href="Adoption-dog.html">Adoption</a>
+
+                        <!-- <div class="dropdown-content">
+                            <br><a href="#">Adopt a Dog/Cat
+                                <i class="fa-sharp fa-solid fa-dog"></i>
+                            </a> <br>
+                            <a href="#">Adopt a 
+                                <i class="fa-sharp fa-solid fa-cat">
+
+                                </i>
+                            </a>
+                        </div> -->
+                    </div>
+                </li>
+
+                <!-- ADOPTION WALA SAMPLA -->
+
+
+                <!-- GET INVOLVED WALA -->
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link" id="dropbtn" href="#">Get Involved</a>
+
+                        <div class="dropdown-content">
+                            <a href="Involve.html">Sponsor an Animal
+                                <i class="fa-solid fa-handshake-simple"></i>
+                            </a><br>
+                            <a href="Involve.html">Foster Puppy or Kitten
+                                <i class="fa-solid fa-house-medical"></i>
+                            </a><br>
+                            <a href="Involve.html">Become Volunteer
+                                <i class="fa-solid fa-hand-holding-hand"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </li>
+                <!-- GET INVOLVED WALA -->
+
+                <!-- ANIMAL RESUCE WALA -->
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link" id="dropbtn">Animal Rescue</a>
+
+                        <div class="dropdown-content">
+                            <a href="rescue.html" class="dark">Animal Lost or Found <i
+                                    class="fa-solid fa-exclamation"></i></a><br>
+                            <a href="rescue.html">Report Animal Cruelty <i class="fa-solid fa-hands-bound"></i></a><br>
+                            <a href="rescue.html">Surrender Animal <i class="fa-sharp fa-solid fa-hands-holding-child"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ANIMAL RESUCE WALA -->
+
+                <!-- DONATION WALA SURU -->
+                <li class="nav-item">
+                    <a class="nav-link" id="dropbtn" href="Donation.html">Donate
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </a>
+                </li>
+
+                <!-- DONATION WALA SAMPLA -->
+
+
+                <li class="nav-item">
+                    <a class="nav-link" id="dropbtn" href="Contacts.html">Contact Us <i
+                            class="fa-solid fa-map-location-dot"></i></a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- NAV BAR SAMPLA -->
+
+
+
+
+    <!-- Carousel Start -->
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="post heading text-center offset">
+
+            <h3 class="display-4 fw-bold" style="margin-top: 15vh;">Sterilization</h3>
+            <hr class="w-50 mx-auto">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="assests/1.jpg" class="d-block w-75 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="assests/2.jpg" class="d-block w-75 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000" >
+            <img src="assests/3.jpg" class="d-block w-75 mx-auto" alt="...">
+          </div>
+          <!-- <div class="carousel-item" data-bs-interval="400" >
+            <img src="..." class="d-block w-100" alt="...">
+          </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Carousel Ends -->
+
+    <!-- Sections Starts  -->
+
+    <div class="container t1">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3>1. WHAT IS STERILIZATION</h3>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It is the surgical removal of reproductive organs
+                    of male and female dogs thus ceasing their reproductive capacity. It also helps them to live a long
+                    and healthy life by reducing risks of tumors and other problems
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <div class="container t1">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3>2. STREET DOG ISSUE</h3>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We are all aware of the massive surge in the
+                    population of the feral dogs in India which has led to the emergence of the following problems:
+                </p>
+                <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • FIGHTS OVER FOOD</h5>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shortage of food often leads to the dogs engaging
+                    in ferocious fights amongst themselves and in some instances humans getting accidently bitten end up
+                    as victims in the act. </p>
+                <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • FEMALE DOGS WITH NEW BORN PUPPIES</h5>
+                <p style="text-align: justify;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Presence of newly born pups often induces the
+                    maternal instinct in the parent sometimes making them aggressive towards people who knowingly or
+                    unknowingly get very close to her pups. The new generation of small children who are extremely fond
+                    of animals often end up getting bitten when they try to play with the pups. </p>
+                <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • MATING</h5>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Male dogs who have a desire for mating often turn
+                    aggressive to compete for a female mate during the reproduction season and may end up accidently
+                    biting people.</p>
+                <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • RABIES</h5>
+                <p > &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A fatal disease sometimes present in dogs which can
+                    be transmitted to humans via bites.</p>
+                <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • HUMAN ANIMAL CONFLICT</h5>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The above mentioned problems often end up in
+                    dog-human conflicts subjecting dogs to abuse involving culling, beating and relocation.</p>
+            </div>
+        </div>
+    </div><br>
+    <div class="container t1">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3>3. SOLUTION</h3>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sterilization has proven to be an effective,
+                    scientific and humane approach to control the feral dog population. It deals with the surgical
+                    procedure of removing the reproductive organs of the male and female dogs making them incapable of
+                    mating and further breeding.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This proves to be effective in reducing their
+                    fights, accidental bites and preventing the birth of new litters. Sterilizing just one female dog
+                    halts the birth of hundreds of pups. Considering these aspects, it is necessary to conduct animal
+                    birth control surgeries on a large scale. Dogs undergoing this procedure are vaccinated against
+                    rabies, thus ensuring that they get protected against the disease and prevent the risk of
+                    transmission to humans.
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <div class="container t1">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3>4. STERILISATION PROCESS</h3>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It is important to understand that sterilization is
+                    a gradual process and a sudden change cannot be expected.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Surgeries are carried out by the Municipal
+                    corporation and Non-Government Organizations (NGOs) with the help of keen and enthusiastic animal
+                    welfare volunteers. Unsterilized dogs are identified by municipal catchers and volunteers and they
+                    further assist in their captures and moving them to the sterilization centers. Sterilized dogs can
+                    be easily identified by a V- shaped notch on one of the ears. Considering the enormity of the
+                    problem, active participation of citizens in identifying unsterilized dogs in their local areas and
+                    reporting it to the concerned volunteers or municipal authorities would be indeed very helpful and
+                    highly appreciated
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Volunteers will then deal with habituating the dogs
+                    by using means of food which will thus make the job of capturing the animal for the surgery a lot
+                    easier. People willing to participate in these activities are also encouraged to join and help the
+                    volunteers and government authorities.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Post-sterilization, the dog will be released again
+                    in his native territory. This will help in keeping the population of that area in check. Relocation
+                    will not be done as dogs in the neighbouring areas being territorial by nature will often end up in
+                    fights with the relocated ones resulting in injuries to people and increasing the chances of
+                    human-dog conflict. Relocation is not the answer as vacant spaces in a territory are immediately
+                    occupied by new home-seeking unsterilized dogs which will only amplify the problem of reproduction
+                    resulting in new litters in that area. Sterilizing, vaccinating and release in their respective
+                    areas are thus the most feasible and effective solutions to control new births and reduce the
+                    human-dog conflicts in the future.
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <div class="container t1">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3>5. HOW CAN YOU HELP ?</h3>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Participation of citizens in awareness programmes
+                    will help spread the message of animal welfare and related activities to a larger section of the
+                    population. Donations to NGOs or area volunteers for sterilization drives will largely help in
+                    increasing the efficiency of the process and conduct it on a bigger platform.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We further request the people not to pressurize the
+                    municipal catchers to pick up sterilized dogs, lactating mothers and pups under 6 months of age.
+                    Doing this will only worsen the ongoing situation. The dogs will be sterilized at the preferred time
+                    once the mother stops lactating and pups are over 6 months of age.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Citizens are also requested not to stop the
+                    catchers from picking up unsterilized dogs. There have been several instances where people have
+                    interfered and objected the process by arguing with the catchers and have prevented them from
+                    executing the necessary captures.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lastly, it is important to understand that in the
+                    current-world scenario, we need to co-exist and live in harmony with the street animals in our
+                    surroundings. We believe that even these animals are entitled to live a happy and peaceful life and
+                    share the surroundings with us. Dogs, as many of you may know are known to be man's best friend and
+                    they display this carrying out their duty of protecting their as well our territory at night and
+                    thereby preventing problems like thefts.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It is also necessary to show a feeling of empathy
+                    towards them. Every year, several dogs and cats become victims of road accidents either killing them
+                    or leaving them handicapped for life. Many die due to starvation due to limitation of food and water
+                    resources. In the view of this, we request all citizens to come forward, cooperate and extend their
+                    support in reporting unsterilized dogs in their areas on our website.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Our sterilization coordinators will get in touch
+                    with you and try to help at the best of their ability.
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <!-- Sections Ends  -->
+
+
+
+  
+
+    <!-- FOOTER SURU -->
+    <div class="footer_img"
+        style="display: flex; justify-content: center; height: 50%; z-index: 2; width:fit-content ;">
+        <img src="./assests/footer bar.png" class="img-fluid"
+            style="margin-bottom:-11%; background-color: transparent;">
+    </div>
+
+    <footer class="bg-dark text-white justify-content-between" style="z-index: 1;">
+
+        <section class="mx-auto pt-3">
+            <div class="container pb-0 d-flex justify-content">
+
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Adoption-dog.html" role="button">
+                    <img src="assests/white paw fliped.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-start align-text-top mx-auto">
+                    Adopt Animal</a>
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Donation.html" role="button">
+                    <img src="assests/WhitePaw-for Walking.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-end align-text-top mx-auto">
+                    Donate</a>
+
+
+            </div>
+        </section>
+    </footer>
+    <footer class="bg-dark text-center text-white">
+
+        <section class="mb-4 mx-auto">
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" role="button"><i
+                    class="fab fa-google"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="Contacts.html" role="button"><i
+                    class="fa-solid fa-map-location-dot"></i></a>
+
+        </section>
+
+        <!-- </footer> -->
+
+
+
+
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">Kothrud Animal Welfare Association, Pune</a>
+            <a>| All Rights Reserved |</a>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: rgba(10, 184, 227, 0.641);">
+            <a>Developed and Managed by Altaf Khan & Others</a>
+        </div>
+
+    </footer>
+
+    <!-- Footer SAMPLA -->
+
+
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+    <script>
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+        });
+    </script>
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+
+
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+    <!-- RATRI 12 TE 4.30 PARIYNTA KELA AHE PLEASE APPRECIATE -->
+    <script>
+        var btn = document.getElementById("button");
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</body>
+
+</html>

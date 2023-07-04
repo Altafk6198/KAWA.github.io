@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            /* outline: greenyellow thin solid; */
+        }
+
+        #Donate {
+            padding-top: 10vh;
+        }
+
+       
+
+        body>div.background>div>div>h1 {
+            margin-top: -20vh !important;
+            font-size: x-large;
+
+        }
+
+        #more {
+            display: none;
+
+        }
+
+        body>div.background>div>row>div {
+            /* border: red 1px solid; */
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .card-img-top {
+            height: 15em;
+        }
+
+       
+    </style>
+
+
+</head>
+
+
+<body style="color: white; background-color: black;">
+
+
+
+    <!-- NAV BAR SURU -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+        <div class="container-fluid">
+            <img src="assests/LOGO NO BG WHITE (1).png" alt="" width="60" height="60"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="Index.html">K.A.W.A.</a>
+
+            <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation" input type="button" onclick="play()"><audio id="audio"
+                    src="oggwoof.ogg"></audio>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Sterlization.html">Sterilization</a>
+                    </li>
+
+                    <!-- ADOPTION WALA SURU -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="Adoption-dog.html">Adoption</a>
+
+                            <!-- <div class="dropdown-content">
+                                <br><a href="#">Adopt a Dog/Cat
+                                    <i class="fa-sharp fa-solid fa-dog"></i>
+                                </a> <br>
+                                <a href="#">Adopt a 
+                                    <i class="fa-sharp fa-solid fa-cat">
+
+                                    </i>
+                                </a>
+                            </div> -->
+                        </div>
+                    </li>
+
+                    <!-- ADOPTION WALA SAMPLA -->
+
+
+                    <!-- GET INVOLVED WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="#">Get Involved</a>
+
+                            <div class="dropdown-content">
+                                <a href="Involve.html">Sponsor an Animal
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                </a><br>
+                                <a href="Involve.html">Foster Puppy or Kitten
+                                    <i class="fa-solid fa-house-medical"></i>
+                                </a><br>
+                                <a href="Involve.html">Become Volunteer
+                                    <i class="fa-solid fa-hand-holding-hand"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!-- GET INVOLVED WALA -->
+
+                    <!-- ANIMAL RESUCE WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn">Animal Rescue</a>
+
+                            <div class="dropdown-content">
+                                <a href="rescue.html" class="dark">Animal Lost or Found <i
+                                        class="fa-solid fa-exclamation"></i></a><br>
+                                <a href="rescue.html">Report Animal Cruelty <i
+                                        class="fa-solid fa-hands-bound"></i></a><br>
+                                <a href="rescue.html">Surrender Animal <i
+                                        class="fa-sharp fa-solid fa-hands-holding-child"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ANIMAL RESUCE WALA -->
+
+                    <!-- DONATION WALA SURU -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Donation.html">Donate
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </a>
+                    </li>
+
+                    <!-- DONATION WALA SAMPLA -->
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Contacts.html">Contact Us <i
+                                class="fa-solid fa-map-location-dot"></i></a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV BAR SAMPLA -->
+
+    <!-- ABOUT US SURU -->
+    <div class="background" style="height:auto" id="aboutBG">
+        <img src="assests/stray-dog-4860126.jpg" class="image-fluid" id="about-img">
+
+        <div class="text-center d-flex align-items-center justify-content-center p-2">
+            <row class="justify-content-end">
+                <div class="about col col-xs-3 col-md-12 col-lg-5  me-auto fs-4 fw-bold">Kothrud Animal Welfare
+                    Association (KAWA) <br>is a collective of people living in and around the Kothrud
+                    area who
+                    are actively involved in improving the lives of stray animals in Kothrud.
+                    <!-- <span
+                        id="dots">..</span><span id="more">During the lockdown, several NGOs stepped forward to help the
+                        animals in need. The existing
+                        animal NGOs also increased their efforts but it was clear that plenty of animals were suffering
+                        due to
+                        lack of food and medication sources. Volunteers realised the necessity of coming together and
+                        thus began the
+                        formation
+                        of KAWA.</span> <button class="btn btn-outline-light btn-sm fw-bold" onclick="myFunction()"
+                        id="myBtn">Know
+                        More</button> -->
+                    </div>
+            </row>
+        </div>
+    </div>
+
+
+
+
+    <div id="cards" class="container-fluid  text-dark px-5" >
+        <div class="text-center text-light" style="text-shadow: 1px 1px 1px black;">
+            <h1>Kawa members are united in helping animals.</h1>
+            <h2>work carried out by our volunteer</h2>
+        </div>
+        <div class="card-group">
+            <div class="row row-cols-1 row-cols-sm-4 g-4">
+
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="https://static.toiimg.com/photo/msid-88879011/88879011.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Feeding</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Rescue.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Rescue</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Foster.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Foster</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Adoption.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Adoption</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Counselling.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Counselling</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Sterlisation.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Sterilisation Drives</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/donation.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Fundraising</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="assests/Coordination.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-1 text-center fw-bold">
+                            <h5 class="card-title m-0">Co-ordination</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-2 p-4">
+        <h2 class="text-center text-light" style="text-shadow: 1px 1px 1px black;">KAWA functions by following a well-organized process to provide prompt and effective assistance to animals in need. Here is a more detailed description of how KAWA works:</h2>
+    <h4 class="text-secondary"><br>1.  KAWA's network of volunteers is always on the lookout for injured or distressed animals in need of help. Anyone can call KAWA's helpline to report an animal in need.
+        <br> <br>2.  Once a volunteer receives a call, they immediately post the case details in KAWA's dedicated WhatsApp group, which is closely monitored by our core team. This ensures that every case is quickly attended to and that the necessary support is provided to the volunteers.
+        <br> <br>3.  KAWA's volunteers, who are located in different parts of the city, promptly attend to the location to assess the situation and provide necessary first aid to the animal. They are trained to handle different types of animals and situations, ensuring that the animal receives the best possible care.
+        <br> <br>4.  Depending on the severity of the case, KAWA's team consults with experienced veterinary doctors for treatment. This ensures that the animal receives the necessary medical attention, and the best course of action is determined to ensure the animal's full recovery.
+        <br> <br>5.  If the animal requires admission to a shelter, KAWA arranges for safe transportation and ensures that they receive the care they need. KAWA has partnerships with various animal shelters and rescue centers, ensuring that animals get the best care.
+        <br> <br>6.  KAWA relies on donations to pay for the treatment and care of these animals. Our core team works tirelessly to raise funds and ensure that every animal receives the best care possible. KAWA is transparent about its fundraising activities and ensures that every rupee donated is used to help animals in need.
+
+    </h4>
+    <br><br>
+    <h2 class="text-light text-center">Overall, KAWA's mission is to ensure that every animal gets the love and care they deserve, and our dedicated team of volunteers and experts work tirelessly to make that happen.</h2>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ABOUT US SAMPLA -->
+
+    <!-- FOOTER SURU -->
+    <div class="footer_img"
+        style="display: flex; justify-content: center; height: 50%; z-index: 2; width:fit-content ; position: sticky;">
+        <img src="./assests/footer bar.png" class="img-fluid"
+            style="margin-bottom:-11%; background-color: transparent;">
+    </div>
+
+    <footer class="bg-dark text-white justify-content-between" style="z-index: 1;">
+
+        <section class="mx-auto pt-3">
+            <div class="container pb-0 d-flex justify-content">
+
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Adoption-dog.html" role="button">
+                    <img src="assests/white paw fliped.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-start align-text-top mx-auto">
+                    Adopt Animal</a>
+
+                <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Donation.html" role="button">
+                    <img src="assests/WhitePaw-for Walking.png" alt="" width="30" height="30"
+                        class="d-flex justify-content-end align-text-top mx-auto">
+                    Donate</a>
+
+
+            </div>
+        </section>
+    </footer>
+    <footer class="bg-dark text-center text-white">
+
+        <section class="mb-4 mx-auto">
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" role="button"><i
+                    class="fab fa-google"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="Contacts.html" role="button"><i
+                    class="fa-solid fa-map-location-dot"></i></a>
+
+        </section>
+
+        <!-- </footer> -->
+
+
+
+
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">Kothrud Animal Welfare Association, Pune</a>
+            <a>| All Rights Reserved |</a>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: rgba(10, 184, 227, 0.641);">
+            <a>Developed and Managed by Rushabh Jangade & Others</a>
+        </div>
+
+    </footer>
+
+    <!-- Footer SAMPLA -->
+
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+    <script>
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+        });
+    </script>
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+
+
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+    <!-- RATRI 12 TE 4.30 PARIYNTA KELA AHE PLEASE APPRECIATE -->
+    <script>
+        var btn = document.getElementById("button");
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+
+    <!-- READ MORE WALI JS -->
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <!-- READ MORE WALI JS -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

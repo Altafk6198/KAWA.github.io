@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawa Donation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        #Donate {
+            padding-top: 10vh;
+        }
+        .head{
+            border: 1px solid green;
+            background-color: cadetblue;
+            height: 20rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .head h1{
+            font-size: 5rem !important;
+            font-weight: 900 !important;
+            color: white;
+            transition: all ease 0.5s;
+        }
+        .head h1:hover{
+            margin-top: -1rem;
+            text-shadow: 2px  2px 4px black;
+        }
+        .img img{
+            max-width: 100%;
+            height: auto;
+            background-image: url(assests/bgcolor.png);
+            background-repeat: no-repeat;
+            /* border: 1px solid red; */
+
+            height: 30rem;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content h1{
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .content p{
+            color: grey;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main img{
+            height: 15rem;
+        }
+        
+        .text{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .text h5{
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .main{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main h5{
+            font-size: 2rem;
+        }
+    </style>
+
+
+</head>
+
+
+<body style="color: white; background-color: black;">
+
+
+
+    <!-- NAV BAR SURU -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+        <div class="container-fluid">
+            <img src="assests/LOGO NO BG WHITE (1).png" alt="" width="60" height="60"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="Index.html">K.A.W.A.</a>
+
+            <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation" input type="button" onclick="play()"><audio id="audio"
+                    src="oggwoof.ogg"></audio>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Sterlization.html">Sterilization</a>
+                    </li>
+
+                    <!-- ADOPTION WALA SURU -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="Adoption-dog.html">Adoption</a>
+
+                            <!-- <div class="dropdown-content">
+                                <br><a href="#">Adopt a Dog/Cat
+                                    <i class="fa-sharp fa-solid fa-dog"></i>
+                                </a> <br>
+                                <a href="#">Adopt a 
+                                    <i class="fa-sharp fa-solid fa-cat">
+
+                                    </i>
+                                </a>
+                            </div> -->
+                        </div>
+                    </li>
+
+                    <!-- ADOPTION WALA SAMPLA -->
+
+
+                    <!-- GET INVOLVED WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="#">Get Involved</a>
+
+                            <div class="dropdown-content">
+                                <a href="Involve.html">Sponsor an Animal
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                </a><br>
+                                <a href="Involve.html">Foster Puppy or Kitten
+                                    <i class="fa-solid fa-house-medical"></i>
+                                </a><br>
+                                <a href="Involve.html">Become Volunteer
+                                    <i class="fa-solid fa-hand-holding-hand"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!-- GET INVOLVED WALA -->
+
+                    <!-- ANIMAL RESUCE WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn">Animal Rescue</a>
+
+                            <div class="dropdown-content">
+                                <a href="rescue.html" class="dark">Animal Lost or Found <i
+                                        class="fa-solid fa-exclamation"></i></a><br>
+                                <a href="rescue.html">Report Animal Cruelty <i class="fa-solid fa-hands-bound"></i></a><br>
+                                <a href="rescue.html">Surrender Animal <i class="fa-sharp fa-solid fa-hands-holding-child"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ANIMAL RESUCE WALA -->
+
+                    <!-- DONATION WALA SURU -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Donation.html">Donate
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </a>
+                    </li>
+
+                    <!-- DONATION WALA SAMPLA -->
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Contacts.html">Contact Us <i
+                                class="fa-solid fa-map-location-dot"></i></a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV BAR SAMPLA -->
+
+    <div class="container py-5 mt-5">
+        <div class="head">
+            <h1 class="text-white fw-bolder fs-1">Donate</h1>
+            <p class="text-white fw-bold fs-3 text-center">Every donation makes a difference to support the animals in our care.</p>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 content">
+            <h1>Every donation makes a difference to support the animals in our care.</h1>
+            <p>Your donations to KAWA will help us provide crucial assistance to animals in need. With your support, we can sponsor health care for injured or distressed animals, cover medical costs and post-operative treatment, and provide vaccinations to prevent future illnesses. Every rupee donated to KAWA goes towards making a difference in the lives of animals, and we are grateful for any support that we receive.</p>
+          </div>
+         
+          <div class="container-fluid col-lg-6 col-sm-12 img img-fluid">
+            <img src="assests/dog.png" alt="">
+          </div>
+        
+        </div>
+      </div>
+      <div class="container main py-5 ">
+        <img src="assests/qrcode.jpeg" alt="">
+                <h5 class="text-white py-3 text-center mt-2">Saving one creature won’t change the world, yet it will change the world for that one creature.</h5>
+                
+      </div>
+
+
+
+
+
+          <!-- FOOTER SURU -->
+    <div class="footer_img"
+    style="display: flex; justify-content: center; height: 50%; z-index: 2; width:fit-content ;">
+    <img src="./assests/footer bar.png" class="img-fluid"
+        style="margin-bottom:-11%; background-color: transparent;">
+</div>
+
+<footer class="bg-dark text-white justify-content-between" style="z-index: 1;">
+
+    <section class="mx-auto pt-3">
+        <div class="container pb-0 d-flex justify-content">
+
+
+            <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Adoption-dog.html" role="button">
+                <img src="assests/white paw fliped.png" alt="" width="30" height="30"
+                    class="d-flex justify-content-start align-text-top mx-auto">
+                Adopt Animal</a>
+
+            <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Donation.html" role="button">
+                <img src="assests/WhitePaw-for Walking.png" alt="" width="30" height="30"
+                    class="d-flex justify-content-end align-text-top mx-auto">
+                Donate</a>
+
+
+        </div>
+    </section>
+</footer>
+<footer class="bg-dark text-center text-white">
+
+    <section class="mb-4 mx-auto">
+
+        <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+        <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                class="fab fa-instagram"></i></a>
+
+
+
+        <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3"
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" role="button"><i
+                class="fab fa-google"></i></a>
+
+        <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="Contacts.html" role="button"><i
+                class="fa-solid fa-map-location-dot"></i></a>
+
+    </section>
+
+    <!-- </footer> -->
+
+
+
+
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="#">Kothrud Animal Welfare Association, Pune</a>
+        <a>| All Rights Reserved |</a>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: rgba(10, 184, 227, 0.641);">
+        <a>Developed and Managed by Aniket Dawane & Others</a>
+    </div>
+
+</footer>
+
+<!-- Footer SAMPLA -->
+
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+    <script>
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+        });
+    </script>
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+
+
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+    <!-- RATRI 12 TE 4.30 PARIYNTA KELA AHE PLEASE APPRECIATE -->
+    <script>
+        var btn = document.getElementById("button");
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

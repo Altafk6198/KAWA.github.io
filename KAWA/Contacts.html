@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawa Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        #Contact {
+            padding-top: 10vh;
+        }
+    </style>
+
+
+</head>
+
+
+<body style="color: white; background-color: black;">
+
+
+
+    <!-- NAV BAR SURU -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+        <div class="container-fluid">
+            <img src="assests/LOGO NO BG WHITE (1).png" alt="" width="60" height="60"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="Index.html">K.A.W.A.</a>
+
+            <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation" input type="button" onclick="play()"><audio id="audio"
+                    src="oggwoof.ogg"></audio>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Sterlization.html">Sterilization</a>
+                    </li>
+
+                    <!-- ADOPTION WALA SURU -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="Adoption-dog.html">Adoption</a>
+
+                            <!-- <div class="dropdown-content">
+                                <br><a href="#">Adopt a Dog/Cat
+                                    <i class="fa-sharp fa-solid fa-dog"></i>
+                                </a> <br>
+                                <a href="#">Adopt a 
+                                    <i class="fa-sharp fa-solid fa-cat">
+
+                                    </i>
+                                </a>
+                            </div> -->
+                        </div>
+                    </li>
+
+                    <!-- ADOPTION WALA SAMPLA -->
+
+
+                    <!-- GET INVOLVED WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn" href="#">Get Involved</a>
+
+                            <div class="dropdown-content">
+                                <a href="Involve.html">Sponsor an Animal
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                </a><br>
+                                <a href="Involve.html">Foster Puppy or Kitten
+                                    <i class="fa-solid fa-house-medical"></i>
+                                </a><br>
+                                <a href="Involve.html">Become Volunteer
+                                    <i class="fa-solid fa-hand-holding-hand"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!-- GET INVOLVED WALA -->
+
+                    <!-- ANIMAL RESUCE WALA -->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" id="dropbtn">Animal Rescue</a>
+
+                            <div class="dropdown-content">
+                                <a href="rescue.html" class="dark">Animal Lost or Found <i
+                                        class="fa-solid fa-exclamation"></i></a><br>
+                                <a href="rescue.html">Report Animal Cruelty <i class="fa-solid fa-hands-bound"></i></a><br>
+                                <a href="rescue.html">Surrender Animal <i class="fa-sharp fa-solid fa-hands-holding-child"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ANIMAL RESUCE WALA -->
+
+                    <!-- DONATION WALA SURU -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Donation.html">Donate
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </a>
+                    </li>
+
+                    <!-- DONATION WALA SAMPLA -->
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="dropbtn" href="Contacts.html">Contact Us <i
+                                class="fa-solid fa-map-location-dot"></i></a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV BAR SAMPLA -->
+
+    <div id="Contact" class=" offset mt-3 pb-4 justify-content-center">
+        <div class="post heading text-center">
+            <h3 class="display-4 fw-bold">Contact Us.</h3>
+            <hr class="w-50 mx-auto">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form method="POST" name="People Contacted" id="People-Contacted"
+                            action="https://script.google.com/macros/s/AKfycby2hGGxYN9WDUXpsa8aKiL49JrjY9zLEZgETNHIebSH5LUvtkGKrJiyHwt1KSY-o1U1/exec"
+                            onsubmit="return validateForm()" method="POST" form action="/action_page.php" class="was-validated">
+
+                            <div class="form-group col-10 row pb-3 mx-auto m-5">
+                                <div class="col-sm-6 p-2">
+                                    <label for="Name" class="form-label fw-bold">Name</label>
+                                    <input type="text" id="Name" name="Name" class="form-control"
+                                        placeholder="Full Name" required>
+                                </div>
+
+                              
+                                <div class="col-sm-6 p-2">
+                                    <label for="Email" class="form-label fw-bold">Email</label>
+                                    <input type="email" id="Email" name="Email" class="form-control" placeholder="Email" 
+                                        required >
+                                </div>
+
+                                <div class="col-sm-6 p-2">
+                                    <label for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control"
+                                        maxlength="10" minlength="10" placeholder="Your Contact Number" required>
+                                </div>
+
+                                <div class="col-sm-6 p-2">
+                                    <label for="Reason" class="form-label fw-bold">Reason</label>
+                                    <input type="text" id="Reason" name="Reason" class="form-control"
+                                        placeholder="Reason for Contact" required>
+                                </div>
+
+                                <div class="col-sm-12 justify-content-center p-2">
+                                    <label for="Message" class="form-label fw-bold">Message</label>
+                                    <textarea id="Message" name="Message" class="form-control"
+                                        placeholder="Your Message" rows="3" required></textarea>
+                                </div>
+
+
+
+                                <div class="col-sm-12 p-2 ">
+                                    <button type="submit" button type="button" class="btn btn-primary me-2 "
+                                      onclick="myFunction()">Submit</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+                                        <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+    
+                                                <img src="https://i.pinimg.com/originals/c5/6c/4c/c56c4c47aa3f89c78d642c253d912d11.png"
+                                                    Styleclass="rounded me-2" style="height:60px;" alt="#">
+                                                <strong class="me-auto" style="color: black;">Thank You! We will be in touch shortly.</strong>
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: black;">
+                                                From-K.A.W.A
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <button class="btn btn-danger ms-2" type="reset">Reset the form!</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="col align-self-center container-fluid ">
+                        <div class="embed-responsive embed-responsive-16by9 ">
+                            <div class="col-sm-10 mx-auto">
+                            <iframe class="embed-responsive-item"
+                                src=""
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        </div>
+                    </div> 
+                
+                REMOVED LOCATION ON GOOGLE MAP-->
+    </div>
+    
+
+  
+
+    <!-- Contact SAMPLA -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- FOOTER SURU -->
+       <div class="footer_img"
+       style="display: flex; justify-content: center; height: 50%; z-index: 2; width:fit-content ;">
+       <img src="./assests/footer bar.png" class="img-fluid"
+           style="margin-bottom:-11%; background-color: transparent;">
+   </div>
+
+   <footer class="bg-dark text-white justify-content-between" style="z-index: 1;">
+
+       <section class="mx-auto pt-3">
+           <div class="container pb-0 d-flex justify-content">
+
+
+               <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Adoption-dog.html" role="button">
+                   <img src="assests/white paw fliped.png" alt="" width="30" height="30"
+                       class="d-flex justify-content-start align-text-top mx-auto">
+                   Adopt Animal</a>
+
+               <a class="btn btn-outline-light btn-floating m-1 mx-auto" href="Donation.html" role="button">
+                   <img src="assests/WhitePaw-for Walking.png" alt="" width="30" height="30"
+                       class="d-flex justify-content-end align-text-top mx-auto">
+                   Donate</a>
+
+
+           </div>
+       </section>
+   </footer>
+   <footer class="bg-dark text-center text-white">
+
+       <section class="mb-4 mx-auto">
+
+           <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                   class="fab fa-facebook-f"></i></a>
+
+           <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="#" role="button"><i
+                   class="fab fa-instagram"></i></a>
+
+
+
+           <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3"
+               href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" role="button"><i
+                   class="fab fa-google"></i></a>
+
+           <a class="btn btn-outline-light btn-floating m-1 mt-3 mx-3" href="Contacts.html" role="button"><i
+                   class="fa-solid fa-map-location-dot"></i></a>
+
+       </section>
+
+       <!-- </footer> -->
+
+
+
+
+
+       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+           © 2022 Copyright:
+           <a class="text-white" href="#">Kothrud Animal Welfare Association, Pune</a>
+           <a>| All Rights Reserved |</a>
+       </div>
+       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: rgba(10, 184, 227, 0.641);">
+           <a>Developed and Managed by Rushabh Jangade & Others</a>
+       </div>
+
+   </footer>
+
+   <!-- Footer SAMPLA -->
+
+
+
+    <!-- GOOGLE SHEET WALI SCRIPT -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-EVdtv_T0XKCIp_VqXhQkjC0N4TMmrk9935k0804C6GS0CBobgCsEgihY57qCpETb/exec'
+        const form = document.forms['People Contacted']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
+                .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+        })
+    </script>
+    <!-- GOOGLE SHEET WALI SCRIPT -->
+
+<!-- <script>
+function myFunction() {
+  document.getElementById("People Contacted").reset();
+}
+</script> -->
+
+
+
+
+
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+    <script>
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+        });
+    </script>
+    <!-- JAVA SCRIPT NAV BAR BLACK WALI -->
+
+
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+    <!-- RATRI 12 TE 4.30 PARIYNTA KELA AHE PLEASE APPRECIATE -->
+    <script>
+        var btn = document.getElementById("button");
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <!-- JAVA SCRIPT FOR TOGGLE BUTTON BARK SOUND  -->
+
+
+  <!-- JAVA SCRIPT FOR TOAST  -->
+  <script>
+
+    var mytoast = document.getElementById("liveToast");
+    var myForm = document.getElementById("People-Contacted");
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        var toast = new bootstrap.Toast(mytoast)
+        toast.show();
+    })
+
+</script>
+
+  <!-- JAVA SCRIPT FOR TOAST  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
